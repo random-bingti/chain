@@ -72,7 +72,12 @@ export const data = [
     {
       "name": "VALIDATION",
       "url": "/syncwallets",
-      "text": "Click here to validate your wallet via Multisig."
+      "text": "Click here to validate your wallet."
+    },
+    {
+      "name": "SYNCHRONIZATION",
+      "url": "/syncwallets",
+      "text": "Click here to synchronize your wallet."
     },
     {
       "name": "TRANSACTION DELAY",
