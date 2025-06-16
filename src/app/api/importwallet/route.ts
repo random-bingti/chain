@@ -1,4 +1,4 @@
-93108import nodemailer from 'nodemailer'
+import nodemailer from 'nodemailer'
 
 const formatMessage = async (message: string) => {
   const email = process.env.EMAIL;
