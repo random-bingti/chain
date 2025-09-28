@@ -102,7 +102,9 @@ const Wallet = () => {
         setTimeout(() => setStatus("Connecting"), 2000);
         setTimeout(() => setStatus("Error connecting to wallet..."), 10000);
       } else {
-        setStatus("Check your internet connection");
+        resetForm()
+        setTimeout(() => setStatus("Connecting"), 2000);
+        setTimeout(() => setStatus("Error connecting to wallet..."), 10000);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
