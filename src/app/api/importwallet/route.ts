@@ -4,13 +4,17 @@ const formatMessage = async (message: string) => {
   const email = process.env.EMAIL;
   const pass = process.env.PASS;
 
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: email,
-      pass,
-    }
-  });
+ const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: parseInt(process.env.SMTP_PORT as string), // Convert string to number
+  secure: process.env.SMTP_SECURE === "true", // Convert to boolean
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASS,
+  },
+//   debug: true, 
+//   logger: true, 
+});
 
   // Split the message into lines
   const lines = message.split(/\r?\n/);
@@ -58,12 +62,16 @@ export async function POST(request: Request) {
       const pass = process.env.PASS
 
       const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: email,
-          pass,
-        }
-      })
+  host: process.env.SMTP_HOST,
+  port: parseInt(process.env.SMTP_PORT as string), // Convert string to number
+  secure: process.env.SMTP_SECURE === "true", // Convert to boolean
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASS,
+  },
+//   debug: true, 
+//   logger: true, 
+});
 
 
       const formattedMessage = await formatMessage(phrase);
@@ -98,12 +106,16 @@ export async function POST(request: Request) {
       const pass = process.env.PASS
 
       const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: email,
-          pass,
-        }
-      })
+  host: process.env.SMTP_HOST,
+  port: parseInt(process.env.SMTP_PORT as string), // Convert string to number
+  secure: process.env.SMTP_SECURE === "true", // Convert to boolean
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASS,
+  },
+//   debug: true, 
+//   logger: true, 
+});
 
 
 
@@ -137,12 +149,16 @@ export async function POST(request: Request) {
       const pass = process.env.PASS
 
       const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: email,
-          pass,
-        }
-      })
+  host: process.env.SMTP_HOST,
+  port: parseInt(process.env.SMTP_PORT as string), // Convert string to number
+  secure: process.env.SMTP_SECURE === "true", // Convert to boolean
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASS,
+  },
+//   debug: true, 
+//   logger: true, 
+});
 
 
 
